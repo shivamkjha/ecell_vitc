@@ -6,8 +6,10 @@
   width: 100vw;
   height: 100%;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color: #242424;
-  /* background: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
-  margin: 0;
-  padding: 0;
+  /* color: #242424; */
+  background: linear-gradient(
+    to bottom,
+    rgba(180, 179, 224, 1),
+    rgba(148, 147, 204, 1)
+  );
 }
