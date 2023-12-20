@@ -1,10 +1,13 @@
-import "./App.css";
-import HomePage from "./pages/HomePage";
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import { Outlet } from "react-router";
 
 function App() {
   return (
     <>
-      <HomePage />
+      <Navbar />
+      <Outlet />
+      <Footer />
     </>
   );
 }

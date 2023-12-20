@@ -1,17 +1,17 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
 import About from "../components/About";
 import Events from "../components/Events";
-import Footer from "../components/Footer";
+import Slides from "../components/Slides"
+import Contact from '../components/Contact';
+import Landing from '../components/Landing';
 
 function HomePage() {
   return (
     <div>
-    <div className='' style={{background: "linear-gradient(to bottom, rgba(180, 179, 224, 1), rgba(148, 147, 204, 1)"}}>
-        <Navbar />
-        <About />
+    <div className=' bg-white' >
+        <Landing />
         <Events />
-        <Footer />
+        <Contact />
       </div>
     </div>
   );

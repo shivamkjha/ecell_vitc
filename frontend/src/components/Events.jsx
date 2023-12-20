@@ -8,7 +8,7 @@ function Events() {
         className="text-5xl font-semibold text-center mt-10"
         style={{ color: "rgba(24,25,81,255)" }}
       >
-        Events
+        Upcoming Events
       </div>
       <div className="w-full p-10 flex items-center justify-evenly flex-wrap">
         <Sample />

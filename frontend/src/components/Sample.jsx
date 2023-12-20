@@ -7,7 +7,7 @@ import { CardActionArea } from "@mui/material";
 
 function Sample() {
   return (
-    <Card sx={{ maxWidth: 345, backgroundColor: "rgba(255,255,255,255);" }}>
+    <Card sx={{ maxWidth: 345, backgroundColor: "rgba(255,255,255,255);", zIndex:"0", marginBottom:"20px"}}>
       <CardActionArea>
         <CardMedia
           component="img"

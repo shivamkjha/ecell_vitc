@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -6,51 +6,90 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import Hidden from "@mui/material/Hidden";
+import { Link } from "react-router-dom";
+import LoginIcon from "@mui/icons-material/Login";
 
 function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const menuItems = ["Events", "Blogs", "Timeline", "Alumni", "Contact us"];
+
+  const drawer = (
+    <List>
+      <ListItem>
+        <img className="w-48 h-16" src="public/images/ecell_logo2.png" alt="" />
+      </ListItem>
+      {menuItems.map((text, index) => (
+        <ListItem key={text}>
+          <Link to={text.toLowerCase()}>
+            <ListItemText primary={text} />
+          </Link>
+        </ListItem>
+      ))}
+    </List>
+  );
+
   return (
-    <div className=' z-99'>
+    <div className="">
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
-          position="static"
+          position="fixed"
           color="secondary"
           style={{ backgroundColor: "rgba(24,25,81,255)" }}
         >
-          <Toolbar>
+          <Toolbar className="flex justify-between items-center">
             <IconButton
               size="large"
-              edge="start"
               color="inherit"
               aria-label="menu"
-              //   sx={{ mr: 2 }}
+              onClick={handleDrawerToggle}
             >
-              {/* <MenuIcon /> */}
-              <img
-                className="w-58 h-12 m-0"
-                src="/images/ecell_logo2.png"
-                alt=""
-              />
+              <MenuIcon />
             </IconButton>
+
+            {/* Centered Logo */}
             <Typography
               variant="h6"
               component="div"
-              sx={{ flexGrow: 1 }}
-            ></Typography>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Blogs</Button>
-            <Button color="inherit">Timeline</Button>
-            <Button color="inherit">Alumini</Button>
-            <Button color="inherit">Contact us</Button>
-            {/* <Button color="inherit">Login</Button> */}
+              className="flex justify-center items-center"
+            >
+              <img
+                className="w-58 h-12 m-0"
+                src="/images/Ecell_dark_LOGO (No Background ).png"
+                alt=""
+              />
+            </Typography>
+
+            {/* Right-aligned Login Button */}
+            <Button color="inherit" startIcon={<LoginIcon />}>
+              <p className="hidden sm:visible">Login</p>
+            </Button>
           </Toolbar>
         </AppBar>
+
+        {/* Drawer for smaller screens, positioned on the right */}
+        <Hidden mdUp implementation="css">
+          <Drawer
+            variant="temporary"
+            anchor="left"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+          >
+            {drawer}
+          </Drawer>
+        </Hidden>
       </Box>
     </div>
   );
 }
 
-export default Navbar
-
-
-
-// rgba(148, 147, 204, 255);
+export default Navbar;

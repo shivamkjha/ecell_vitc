@@ -1,15 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  width: 100vw;
-  height: 100%;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  /* color: #242424; */
-  background: linear-gradient(
-    to bottom,
-    rgba(180, 179, 224, 1),
-    rgba(148, 147, 204, 1)
-  );
-}
