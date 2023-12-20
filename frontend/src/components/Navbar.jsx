@@ -21,7 +21,7 @@ function Navbar() {
     setMobileOpen(!mobileOpen);
   };
 
-  const menuItems = ["Events", "Blogs", "Timeline", "Alumni", "Contact us"];
+  const menuItems = ["Events","Our Team", "Blogs", "Timeline", "Alumni", "Contact us"];
 
   const drawer = (
     <List>
@@ -44,7 +44,7 @@ function Navbar() {
         <AppBar
           position="fixed"
           color="secondary"
-          style={{ backgroundColor: "rgba(24,25,81,255)" }}
+          style={{ backgroundColor: "rgba(24, 25, 81)" }}
         >
           <Toolbar className="flex justify-between items-center">
             <IconButton
@@ -63,8 +63,8 @@ function Navbar() {
               className="flex justify-center items-center"
             >
               <img
-                className="w-58 h-12 m-0"
-                src="/images/Ecell_dark_LOGO (No Background ).png"
+                className="w-64 h-16 m-0"
+                src="/images/ecell_logo2.png"
                 alt=""
               />
             </Typography>

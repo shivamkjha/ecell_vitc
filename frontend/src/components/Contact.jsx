@@ -3,7 +3,7 @@ import FormControl from "@mui/material/FormControl";
 
 function Contact() {
   return (
-    <div className='w-full h-screen'>
+    <div className='w-full h-screen contact'>
       <FormControl>
         {/* <InputLabel htmlFor="my-input">Email address</InputLabel> */}
         {/* <Input id="my-input" aria-describedby="my-helper-text" /> */}

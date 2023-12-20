@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div
-      className="flex flex-wrap items-center justify-evenly w-full h-96 sm:h-64 text-white border bottom-0"
+      className="flex flex-wrap items-center justify-evenly w-full h-96 sm:h-64 text-white bottom-0"
       style={{ backgroundColor: "rgba(24,25,81,255)" }}
     >
       {/* Contacts  */}
