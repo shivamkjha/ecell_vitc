@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@mui/material";
+import { Paper } from "@mui/material";
 
 function Slides(props) {
   var items = [
@@ -15,7 +15,7 @@ function Slides(props) {
   ];
 
   return (
-    <Carousel className="mt-12 w-full">
+    <Carousel className="w-full pt-0">
       {items.map((item, i) => (
         <Item className="" key={i} item={item} />
       ))}
@@ -26,7 +26,7 @@ function Slides(props) {
 function Item(props) {
   return (
     <Paper
-      className="w-80 h-96 sm:w-[550px] sm:h-[650px] ml-0 sm:ml-16"
+      className="w-80 h-96 sm:w-[550px] sm:h-[650px] flex items-center justify-center mx-auto"
       style={{
         borderRadius: "23px",
         boxShadow: "10px 10px 10px rgba(0, 0, 0, 0.5)",
@@ -38,4 +38,5 @@ function Item(props) {
   );
 }
 
-export default Slides
+
+export default Slides;

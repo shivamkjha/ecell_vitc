@@ -7,20 +7,19 @@ function Team() {
     <div className="team">
       <Heading heading={"Our Team"} />
       <div className="">
-        
         {/* President */}
-        <div className="w-full h-1/4 flex justify-center">
+        <div className="w-full flex justify-center">
           <Teammate picture={"/images/Team/president.png"} post={"President"} />
         </div>
 
         {/* Vice President  */}
-        <div className="w-full h-1/4 flex justify-center flex-wrap">
+        <div className="sm:ml-96 sm:pl-12 pl-0 flex overflow-x-auto overflow-y-auto overflow-hidden">
           <Teammate picture={"/images/Team/vp1.png"} post={"Vice President"} />
           <Teammate picture={"/images/Team/vp2.png"} post={"Vice President"} />
         </div>
 
         {/* Seceretary & Directors  */}
-        <div className="w-full h-1/4 flex flex-wrap justify-center">
+        <div className="sm:ml-32 flex overflow-x-auto overflow-hidden">
           <Teammate
             picture={"/images/Team/secratery1.png"}
             post={"Secretery"}
@@ -41,7 +40,7 @@ function Team() {
             post={"Director of Design"}
           />
         </div>
-        <div className="w-full h-1/4 flex flex-wrap justify-center">
+        <div className="sm:ml-0 h-1/4 flex overflow-x-auto overflow-hidden">
           <Teammate
             picture={"/images/Team/director2.png"}
             post={"Director of S & I"}
@@ -65,7 +64,7 @@ function Team() {
         </div>
 
         {/* Leads  */}
-        <div className="w-screen h-1/4 flex flex-wrap justify-center">
+        <div className=" sm:ml-0 h-1/4 flex overflow-x-auto overflow-hidden">
           <Teammate picture={"/images/Team/Lead1.png"} post={"S & I Lead"} />
           <Teammate picture={"/images/Team/Lead2.png"} post={"S & I Lead"} />
           <Teammate

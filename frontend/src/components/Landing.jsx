@@ -6,12 +6,12 @@ import About from "./About";
 function Landing() {
 
   return (
-    <div className="w-full flex flex-col-reverse pt-0 sm:flex-row items-center">
+    <div className="w-screen pt-0 sm:pt-24 flex flex-col sm:flex-row items-center">
       <About />
 
       {/* Carousel  */}
-      <div className="w-full sm:w-1/2 pt-12 pl-10 sm:pl-0 sm:pt-16 flex justify-center">
-        <div className="w-full">
+      <div className="w-full sm:w-1/2 ">
+        <div className="">
           <Slides />
         </div>
       </div>

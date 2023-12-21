@@ -16,3 +16,7 @@ overflow-x-auto : horizontal scrolling (in Blogs)
 
 routing : outlet works as a placeholder to substitute different routes at its place (ref app.jsx)
 
+
+//! mx-auto 
+//! my-auto 
+//! px-auto
