@@ -6,6 +6,7 @@ import Contact from '../components/Contact';
 import Landing from '../components/Landing';
 import Team from '../components/Team';
 import Blogs from '../components/Blogs';
+import BlogsContainer from '../components/BlogsContainer';
 
 function HomePage() {
   return (
@@ -13,7 +14,8 @@ function HomePage() {
       <div className="" style={{ backgroundColor: "#F5F5F5" }}>
         <Landing />
         <Events />
-        <Blogs />
+        <BlogsContainer />
+        {/* <Blogs /> */}
         <Team />
         <Contact />
       </div>
