@@ -4,7 +4,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 function About() {
   return (
-    <div className="w-full sm:w-1/2 pt-24 ml-0 sm:ml-8 p-3">
+    <div className="w-full sm:w-1/2 pt-2 sm:pt-24 ml-0 sm:ml-8 p-3">
       <div>
         <img
           className="w-60 h-20 ml-20"
