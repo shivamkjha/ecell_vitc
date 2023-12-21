@@ -1,18 +1,75 @@
 import React from 'react'
 import FormControl from "@mui/material/FormControl";
+import Heading from './widgets/Heading';
+
 
 function Contact() {
   return (
-    <div className='w-full h-screen contact'>
-      <FormControl>
-        {/* <InputLabel htmlFor="my-input">Email address</InputLabel> */}
-        {/* <Input id="my-input" aria-describedby="my-helper-text" /> */}
-        {/* <FormHelperText id="my-helper-text">
-          We'll never share your email.
-        </FormHelperText> */}
-      </FormControl>
+    <div id="contact">
+      <Heading heading={"Contact Us"} />
+      <p className="text-xl text-center">
+        Do you have an idea or want to collaborate? Connect with us by filling
+        out the form below!
+      </p>
+      <div className="w-full contact p-4 sm:p-10 flex justify-center">
+        <div className="bg-bcol w-full sm:w-auto text-center rounded-3xl shadow-2xl text-xl text-black font-medium p-10">
+          {/* <label className="m-2" htmlFor="">
+            Name
+          </label> */}
+          {/* <br /> */}
+          <input
+            className="w-60 m-2 rounded text-sm p-2 text-center"
+            placeholder="Enter your name"
+            type="text"
+            name=""
+            id=""
+          />
+          {/* <br /> */}
+          {/* <label className="m-2" htmlFor="">
+            Email
+          </label> */}
+          <br />
+          <input
+            className="w-60 m-3 rounded text-sm p-2 text-center"
+            placeholder="Enter your Email"
+            type="text"
+            name=""
+            id=""
+          />
+          <br />
+          <input
+            className="w-60 m-3 rounded text-sm p-2 text-center"
+            placeholder="Enter Subject"
+            type="text"
+            name=""
+            id=""
+          />
+          {/* <label className="m-3" htmlFor="">
+            Message
+          </label> */}
+          <br />
+          <textarea
+            className="sm:w-96 w-60 h-24 rounded text-sm text-center mt-3"
+            placeholder="Write your message here.."
+            name=""
+            id=""
+          ></textarea>
+          <br /> 
+          <button className="bg-primary w-24 h-10 font-semibold text-md text-white shadow-2xl rounded-xl mt-3">
+            Submit
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default Contact
+
+
+//! Context API
+//! Responsiveness of team and contact
+//! Navbar : understanding and width of drawer
+//! blog colors
+//! Timeline
+

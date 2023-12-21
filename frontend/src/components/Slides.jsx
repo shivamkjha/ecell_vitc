@@ -17,7 +17,7 @@ function Slides(props) {
   ];
 
   return (
-    <Carousel className="mt-12">
+    <Carousel className="mt-12 flex justify-center flex-wrap">
       {items.map((item, i) => (
         <Item key={i} item={item} />
       ))}
@@ -33,7 +33,6 @@ function Item(props) {
         borderRadius: "23px",
         boxShadow: "10px 10px 10px rgba(0, 0, 0, 0.5)",
         overflow: "hidden",
-        marginLeft:""
       }}
     >
       <img className="w-full h-full" src={props.item.img} alt="" />

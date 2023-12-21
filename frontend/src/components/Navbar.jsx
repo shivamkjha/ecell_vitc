@@ -13,6 +13,12 @@ import ListItemText from "@mui/material/ListItemText";
 import Hidden from "@mui/material/Hidden";
 import { Link } from "react-router-dom";
 import LoginIcon from "@mui/icons-material/Login";
+import { Link as ScrollLink } from "react-scroll";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+
+
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -21,22 +27,51 @@ function Navbar() {
     setMobileOpen(!mobileOpen);
   };
 
-  const menuItems = ["Events","Our Team", "Blogs", "Timeline", "Alumni", "Contact us"];
+  const menuItems = [
+    "Events",
+    "Blogs",
+    "Team",
+    "Timeline",
+    "Alumni",
+    "Contact us",
+  ];
 
+  // Navigation Drawer 
   const drawer = (
-    <List>
-      <ListItem>
-        <img className="w-48 h-16" src="public/images/ecell_logo2.png" alt="" />
+    <List className="w-96 h-full bg-bcol">
+      <ListItem className="w-full flex-col">
+        <img className="w-52 h-16" src="public/images/ecell_logo2.png" alt="" />
       </ListItem>
       {menuItems.map((text, index) => (
-        <ListItem key={text}>
-          <Link to={text.toLowerCase()}>
+        <ListItem className="w-full flex-col cursor-pointer" key={text}>
+          <ScrollLink
+            to={text.split(" ")[0].toLowerCase()}
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={1000}
+          >
             <ListItemText primary={text} />
-          </Link>
+          </ScrollLink>
         </ListItem>
       ))}
+
+      {/* Socials  */}
+      <div className="w-full sm:w-96 text-center p-2 ">
+        <p className="text-xl font-bold">Socials</p>
+        <a className="hover:scale-105" href="https://www.instagram.com/ecell_vitcc/">
+            <InstagramIcon fontSize="medium" className="mr-2" />
+          </a>
+          <a href="">
+            <MailOutlineIcon fontSize="medium" className="mr-2"/>
+          </a>
+          <a href="https://www.linkedin.com/in/e-cell-vit-chennai-7620bb248/">
+            <LinkedInIcon fontSize="medium" className="mr-2" />
+          </a>
+      </div>
     </List>
   );
+
 
   return (
     <div className="">

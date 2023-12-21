@@ -9,7 +9,7 @@ import Button from "@mui/material/Button";
 
 function Event({ eventName, description, picture }) {
   return (
-    <div className="bg-green-500 bg-bcol p-8">
+    <div className="bg-bcol p-8">
       <Card
         className="w-[330px] h-[600px] ml-2 bg-white "
         style={{ borderRadius: "20px" }}

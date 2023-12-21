@@ -2,9 +2,9 @@ import React from 'react'
 
 function Teammate({picture,post}) {
   return (
-    <div className='w-60 h-60 border-2 m-4'>
-      <img  className="w-full h-full" src={picture} alt="" />
-      <p className='text-center text-xl font-semibold'>{post}</p>
+    <div className='w-64 h-66 rounded-xl overflow-hidden p-2 bg-green-600 text-white m-4 shadow-xl'>
+      <img  className="w-full h-60 rounded-t-xl" src={picture} alt="" />
+      <div className='w-full text-xl font-medium flex items-center justify-center'>{post}</div>
     </div>
   )
 }
