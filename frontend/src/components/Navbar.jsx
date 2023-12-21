@@ -40,7 +40,7 @@ function Navbar() {
   const drawer = (
     <List className="w-96 h-full bg-bcol">
       <ListItem className="w-full flex-col">
-        <img className="w-52 h-16" src="public/images/ecell_logo2.png" alt="" />
+        <img className="w-52 h-16" src="/images/ecell_logo2.png" alt="" />
       </ListItem>
       {menuItems.map((text, index) => (
         <ListItem className="w-full flex-col cursor-pointer" key={text}>
