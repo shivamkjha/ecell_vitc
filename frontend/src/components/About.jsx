@@ -3,24 +3,24 @@ import { Link as ScrollLink } from "react-scroll";
 
 function About() {
   return (
-    <div className="w-full sm:w-1/2 pt-24 ml-0 sm:ml-8">
+    <div className="w-full sm:w-1/2 pt-24 ml-0 sm:ml-8 p-3">
       <div>
         <img
-          className="w-60 h-20 ml-16"
+          className="w-60 h-20 ml-20"
           src="/images/Ecell_dark_LOGO (No Background ).png"
           alt=""
         />
         <div className="w-full text-left sm:order-1 pl-0 sm:pl-16">
-          <p className="text-3xl sm:text-5xl font-bold text-primary p-3">
+          <p className="text-4xl sm:text-5xl font-bold text-primary">
             Welcome to <br />
             Entrepreneurship Cell <br />
             VIT Chennai.
           </p>
-          <p className="text-l sm:text-xl p-2">
+          <p className="text-l sm:text-xl">
             Our mission is to foster an entrepreneurial spirit among students
             and provide them with the resources and support to turn their
-            innovative ideas into successful ventures. Through workshops,
-            mentorship programs, and networking events, we aim to cultivate the
+            innovative ideas into successful ventures. we conduct various workshops,
+            mentorship programs and networking events, we aim to cultivate the
             next generation of business leaders and changemakers.
           </p>
 

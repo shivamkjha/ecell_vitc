@@ -10,7 +10,7 @@ function Events() {
       <div className="w-screen sm:w-[1400px] ml-0 sm:ml-10 flex items-center overflow-x-auto overflow-hidden sm:rounded-l-3xl">
         
         <Event
-          picture={"public/images/IPLBattle.png"}
+          picture={"/images/IPLBattle.png"}
           eventName={"IPL Battle"}
           description={`Ipl is a both a religion and a festival! None wants to miss it
               out A boon to all the people bored of binge-hearing the same old
@@ -27,13 +27,13 @@ function Events() {
           Only one way to find out.`}
         />
         <Event
-          picture={"public/images/StockMarketSimulation.png"}
+          picture={"/images/StockMarketSimulation.png"}
           eventName={"Stock Market Simulation"}
           description={`long with the share market, this event also incorporates modern infrastructure 
           by encouraging crypto and forex trading.📈 Trading will be done through virtual currency on a reputed platform.`}
         />
         <Event
-          picture={"public/images/Hackathon.png"}
+          picture={"/images/Hackathon.png"}
           eventName={"48 Hours Hackathon"}
           description={`The way to get good ideas is to get lots of ideas and throw the bad ones away"
           E-cell welcomes you all to join this exciting 24 hours hackathon.

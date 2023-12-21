@@ -10,14 +10,14 @@ function Slides(props) {
     },
     {
       name: "Random Name #2",
-      img: "public/images/Screenshot 2023-12-20 at 13.23.21.png",
+      img: "/images/Screenshot 2023-12-20 at 13.23.21.png",
     },
   ];
 
   return (
-    <Carousel className="mt-12 flex justify-center flex-wrap">
+    <Carousel className="mt-12 w-full">
       {items.map((item, i) => (
-        <Item key={i} item={item} />
+        <Item className="" key={i} item={item} />
       ))}
     </Carousel>
   );
