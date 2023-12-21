@@ -40,10 +40,12 @@ function Navbar() {
   const drawer = (
     <List className="w-96 h-full bg-bcol">
       <ListItem className="w-full flex-col">
+        <Link to={"/"}>
         <img className="w-52 h-16" src="/images/ecell_logo2.png" alt="" />
+        </Link>
       </ListItem>
       {menuItems.map((text, index) => (
-        <ListItem className="w-full flex-col cursor-pointer" key={text}>
+        <ListItem className="w-full h-12 flex-col cursor-pointer" key={text}>
           <ScrollLink
             to={text.split(" ")[0].toLowerCase()}
             spy={true}
@@ -97,11 +99,13 @@ function Navbar() {
               component="div"
               className="flex justify-center items-center"
             >
-              <img
-                className="w-64 h-16 m-0"
-                src="/images/ecell_logo2.png"
-                alt=""
-              />
+              <Link to={"/"}>
+                <img
+                  className="w-64 h-16 m-0"
+                  src="/images/ecell_logo2.png"
+                  alt=""
+                />
+              </Link>
             </Typography>
 
             {/* Right-aligned Login Button */}

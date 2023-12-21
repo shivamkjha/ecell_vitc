@@ -1,5 +1,6 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 function About() {
   return (
@@ -34,8 +35,10 @@ function About() {
               offset={-65}
               duration={1000}
             >
-              <button className=" bg-green-600 p-3 font-semibold text-2xl text-white shadow-2xl rounded-xl m-4">
-                Contact us
+              <button className="hover:bg-green-700 bg-green-600 p-3 font-semibold text-2xl text-white shadow-2xl rounded-xl m-4">
+                <div className="hover:scale-105 transition duration-300 ease-in-out">
+                  Contact us
+                </div>
               </button>
             </ScrollLink>
           </div>

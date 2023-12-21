@@ -9,26 +9,27 @@ import Button from "@mui/material/Button";
 
 function Event({ eventName, description, picture }) {
   return (
-    <div className="bg-bcol p-8">
+    <div className="bg-bcol p-6">
       <Card
-        className="w-[330px] h-[600px] ml-2 bg-white "
+        className="w-72 h-[590px] sm:w-[330px] sm:h-[600px] ml-1 bg-white "
         style={{ borderRadius: "20px" }}
       >
         <CardActionArea>
           <CardMedia
+            className="h-68 sm:h-80"
             component="img"
-            height="120"
+            // height="120"
             image={picture}
             alt={eventName}
           />
           <CardContent>
             <Typography
               gutterBottom
-              variant="h5"
-              fontSize="24px"
+              // variant="h5"
+              // fontSize="24px"
               fontWeight="600"
               component="div"
-              className="text-center text-primary"
+              className="text-md sm:text-lg text-center text-primary"
             >
               {eventName}
             </Typography>

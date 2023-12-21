@@ -10,7 +10,7 @@ function Landing() {
       <About />
 
       {/* Carousel  */}
-      <div className="w-full sm:w-1/2 pt-0 pl-8 sm:pl-0 sm:pt-16 flex justify-center">
+      <div className="w-full sm:w-1/2 pt-0 pl-10 sm:pl-0 sm:pt-16 flex justify-center">
         <div className="w-full">
           <Slides />
         </div>
