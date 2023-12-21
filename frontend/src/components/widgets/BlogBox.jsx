@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 
 function BlogBox({ heading, author, content }) {
   return (
-    <div className="w-full sm:w-1/2 flex items-center justify-center p-8">
+    <div className="w-full sm:w-1/2 flex items-center justify-center p-12">
       <div className="w-full h-full border-primary border-2 bg-yellow-50  rounded p-2 overflow-hidden">
         <div>
           <img

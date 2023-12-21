@@ -4,8 +4,10 @@ CREATED USING VITE
     CHANGES:
     1. main.jsx instead of index.jsx
     2. npm run dev instead of npm start
-}
 
+    STRUCTURE:
+    app.jsx -> Homepage.jsx -> other components 
+}
 
 
 react-scroll :  Library : to scroll to different positions on page.

@@ -8,6 +8,7 @@ function Events() {
     <div id="events">
       <Heading heading={"Our Events"} />
       <div className="w-screen sm:w-[1400px] ml-0 sm:ml-10 flex items-center overflow-x-auto overflow-hidden sm:rounded-l-3xl">
+        
         <Event
           picture={"public/images/IPLBattle.png"}
           eventName={"IPL Battle"}
@@ -16,7 +17,7 @@ function Events() {
               classes and lectures A blessing to all those who have waited for
               something exciting to happen Yes IPL Auction is here E-cell is
               organizing an exciting 8 hour long IPL-auction where people can
-               build their dream team`}
+               build their dream team`} 
         />
 
         <Event

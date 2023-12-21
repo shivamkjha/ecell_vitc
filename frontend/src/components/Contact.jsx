@@ -12,11 +12,11 @@ function Contact() {
         out the form below!
       </p>
       <div className="w-full contact p-4 sm:p-10 flex justify-center">
-        <div className="bg-bcol w-full sm:w-auto text-center rounded-3xl shadow-2xl text-xl text-black font-medium p-10">
-          {/* <label className="m-2" htmlFor="">
+        <div className="bg-bcol w-full sm:w-auto text-center rounded-3xl shadow-2xl text-xl text-black p-10">
+          <label  htmlFor="">
             Name
-          </label> */}
-          {/* <br /> */}
+          </label>
+          <br />
           <input
             className="w-60 m-2 rounded text-sm p-2 text-center"
             placeholder="Enter your name"
@@ -24,37 +24,42 @@ function Contact() {
             name=""
             id=""
           />
-          {/* <br /> */}
-          {/* <label className="m-2" htmlFor="">
+          <br />
+          <label  htmlFor="">
             Email
-          </label> */}
+          </label>
           <br />
           <input
-            className="w-60 m-3 rounded text-sm p-2 text-center"
+            className="w-60 m-2 rounded text-sm p-2 text-center"
             placeholder="Enter your Email"
             type="text"
             name=""
             id=""
           />
           <br />
+          <label htmlFor="">
+            Subject
+          </label>
+          <br />
           <input
-            className="w-60 m-3 rounded text-sm p-2 text-center"
+            className="w-60 m-2 rounded text-sm p-2 text-center"
             placeholder="Enter Subject"
             type="text"
             name=""
             id=""
           />
-          {/* <label className="m-3" htmlFor="">
-            Message
-          </label> */}
+          <br />
+          <label htmlFor="">
+            Message / Pitch
+          </label>
           <br />
           <textarea
-            className="sm:w-96 w-60 h-24 rounded text-sm text-center mt-3"
+            className="sm:w-96 w-60 h-24 rounded text-sm text-center mt-2"
             placeholder="Write your message here.."
             name=""
             id=""
           ></textarea>
-          <br /> 
+          <br />
           <button className="bg-primary w-24 h-10 font-semibold text-md text-white shadow-2xl rounded-xl mt-3">
             Submit
           </button>

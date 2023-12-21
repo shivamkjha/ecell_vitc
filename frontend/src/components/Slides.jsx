@@ -6,12 +6,10 @@ function Slides(props) {
   var items = [
     {
       name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
       img: "/images/Screenshot 2023-12-20 at 13.22.42.png",
     },
     {
       name: "Random Name #2",
-      description: "Hello World!",
       img: "public/images/Screenshot 2023-12-20 at 13.23.21.png",
     },
   ];
