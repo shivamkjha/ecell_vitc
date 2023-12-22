@@ -10,13 +10,12 @@ import BlogEdit from "./components/ecellUsers/blogs/BlogEdit"
 function App() {
   return (
     <>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-gray-100">
         <Navbar />
-        <div className="flex-1 pt-20 pb-4">
+        <div className="flex-1 pt-16 pb-4">
         <Outlet />
-        {/* <Test /> */}
         {/* <BlogsIndex /> */}
-        <BlogEdit />
+        {/* <BlogEdit /> */}
         </div>
         <Footer />
       </div>
