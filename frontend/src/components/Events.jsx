@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Event from "./widgets/Event";
 import Heading from "./widgets/Heading";
 
 const eventsData = [
+   
   {
     picture: "/images/IPLBattle.png",
     eventName: "IPL Battle",
@@ -57,6 +58,7 @@ function Events() {
             eventName={event.eventName}
             description={event.description}
           />
+          
         ))}
       </div>
     </div>

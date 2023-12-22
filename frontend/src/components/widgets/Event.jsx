@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Button from "@mui/material/Button";
 
-
 function Event({ eventName, description, picture }) {
   return (
     <div className="bg-bcol p-6">
@@ -34,10 +33,11 @@ function Event({ eventName, description, picture }) {
               {eventName}
             </Typography>
             <Typography
-             variant="body2"
-             fontSize="16px" 
-             height="100px"
-             className="text-black text-base">
+              variant="body2"
+              fontSize="16px"
+              height="100px"
+              className="text-black text-base"
+            >
               {description}
             </Typography>
           </CardContent>
