@@ -6,7 +6,7 @@ import Contact from '../components/Contact';
 import Landing from '../components/Landing';
 import Team from '../components/Team';
 import Blogs from '../components/Blogs';
-import BlogsContainer from '../components/BlogsContainer';
+import BlogsContainer from '../components/Blogs';
 
 function HomePage() {
   return (

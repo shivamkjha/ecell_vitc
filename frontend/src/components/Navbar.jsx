@@ -13,19 +13,26 @@ import ListItemText from "@mui/material/ListItemText";
 import Hidden from "@mui/material/Hidden";
 import { Link } from "react-router-dom";
 import LoginIcon from "@mui/icons-material/Login";
-import { Link as ScrollLink } from "react-scroll";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-
-
+import CloseIcon from "@mui/icons-material/Close";
+import { useLocation } from "react-router-dom";
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const location = useLocation();
+
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  const handleMenuItemClick = () => {
+    setMobileOpen(false);  // Close the drawer when a menu item is clicked
+  };
+
 
   const menuItems = [
     "Events",
@@ -36,61 +43,86 @@ function Navbar() {
     "Contact us",
   ];
 
-  // Navigation Drawer 
-  const drawer = (
-    <List className="w-96 h-full bg-bcol">
-      <ListItem className="w-full flex-col">
-        <Link to={"/"}>
-        <img className="w-52 h-16" src="/images/ecell_logo2.png" alt="" />
-        </Link>
-      </ListItem>
-      {menuItems.map((text, index) => (
-        <ListItem className="w-full h-12 flex-col cursor-pointer" key={text}>
-          <ScrollLink
-            to={text.split(" ")[0].toLowerCase()}
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={1000}
-          >
-            <ListItemText primary={text} />
-          </ScrollLink>
-        </ListItem>
-      ))}
+  const socialLinks = [
+    {
+      href: "https://www.instagram.com/ecell_vitcc/",
+      icon: <InstagramIcon fontSize="medium" className="mr-2" />,
+    },
+    {
+      href: "#", 
+      icon: <MailOutlineIcon fontSize="medium" className="mr-2" />,
+    },
+    {
+      href: "https://www.linkedin.com/in/e-cell-vit-chennai-7620bb248/",
+      icon: <LinkedInIcon fontSize="medium" className="mr-2" />,
+    },
+  ];
 
-      {/* Socials  */}
-      <div className="w-full sm:w-96 text-center p-2 ">
-        <p className="text-xl font-bold">Socials</p>
-        <a className="hover:scale-105" href="https://www.instagram.com/ecell_vitcc/">
-            <InstagramIcon fontSize="medium" className="mr-2" />
-          </a>
-          <a href="">
-            <MailOutlineIcon fontSize="medium" className="mr-2"/>
-          </a>
-          <a href="https://www.linkedin.com/in/e-cell-vit-chennai-7620bb248/">
-            <LinkedInIcon fontSize="medium" className="mr-2" />
-          </a>
+const drawer = (
+  <div className="w-screen sm:w-96 flex flex-col justify-between h-full bg-bcol font-semibold text-xl text-gray-700">
+    <div className="flex justify-center bg-primary p-0">
+      <Link to={"/"}>
+        <img className="w-64 h-20 m-0" src="/images/ecell_logo2.png" alt="" />
+      </Link>
+    </div>
+
+    <div className="my-auto text-center flex-col justify-center">
+      <div>
+        <Link to={""} onClick={handleMenuItemClick}>
+          <div className="w-full h-12 hover:scale-150 hover:text-white transition duration-300 ease-in-out">
+            <p className="text-center font-semibold">Home</p>
+          </div>
+        </Link>
       </div>
-    </List>
-  );
+
+      <div className="flex flex-col justify-center">
+        {menuItems.map((text, index) => (
+          <Link
+            key={text}
+            to={text.split(" ")[0].toLowerCase()}
+            onClick={handleMenuItemClick}
+          >
+            <div className="w-full h-12 cursor-pointer hover:scale-150 hover:text-white transition duration-300 ease-in-out">
+              <p className="text-center">{text}</p>
+            </div>
+          </Link>
+        ))}
+        <div className="text-center">
+          <IconButton onClick={handleDrawerToggle} >
+            <CloseIcon className="text-white hover:scale-110" fontSize="large" />
+          </IconButton>
+        </div>
+      </div>
+    </div>
+
+    <div className="text-center p-4">
+      {socialLinks.map((link, index) => (
+        <a key={index} className="hover:scale-105" href={link.href}>
+          {link.icon}
+        </a>
+      ))}
+    </div>
+  </div>
+);
 
 
   return (
-    <div className="">
+    <div className="flex justify-evenly">
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
+          className=""
           position="fixed"
           color="secondary"
           style={{ backgroundColor: "rgba(24, 25, 81)" }}
         >
-          <Toolbar className="flex justify-between items-center">
+          <Toolbar className="flex justify-between items-center p-1">
             <IconButton
               size="large"
               color="inherit"
               aria-label="menu"
               onClick={handleDrawerToggle}
             >
-              <MenuIcon />
+              <MenuIcon fontSize="" />
             </IconButton>
 
             {/* Centered Logo */}
@@ -109,9 +141,15 @@ function Navbar() {
             </Typography>
 
             {/* Right-aligned Login Button */}
-            <Button color="inherit" startIcon={<LoginIcon />}>
-              <p className="hidden sm:visible">Login</p>
-            </Button>
+            <div>
+              {location.pathname === "/" && (
+                <div className="ml-auto">
+                  <Button color="inherit" startIcon={<LoginIcon />}>
+                    <p className="hidden sm:visible">Login</p>
+                  </Button>
+                </div>
+              )}
+            </div>
           </Toolbar>
         </AppBar>
 

@@ -11,7 +11,7 @@ function Contact() {
         Do you have an idea or want to collaborate? Connect with us by filling
         out the form below!
       </p>
-      <div className="w-full contact p-4 sm:p-10 flex justify-center">
+      <div className="w-full contact p-4 sm:p-10 flex justify-center text-primary">
         <div className="bg-bcol w-full sm:w-auto text-center rounded-3xl shadow-2xl text-xl text-black p-10">
           <label  htmlFor="">
             Name
