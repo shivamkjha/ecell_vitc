@@ -72,9 +72,3 @@ function Contact() {
 export default Contact
 
 
-//! Context API
-//! Responsiveness of team and contact
-//! Navbar : understanding and width of drawer
-//! blog colors
-//! Timeline
-

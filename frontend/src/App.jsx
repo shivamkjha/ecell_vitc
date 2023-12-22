@@ -13,7 +13,7 @@ function App() {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <div className="flex-1 pt-20 pb-4">
-        {/* <Outlet /> */}
+        <Outlet />
         {/* <Test /> */}
         {/* <BlogsIndex /> */}
         <BlogEdit />

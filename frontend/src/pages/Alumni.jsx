@@ -1,7 +1,6 @@
 import React from "react";
-import Heading from "./widgets/Heading";
-import Teammate from "./widgets/Teammate";
-import AlumniFrame from "./widgets/AlumniFrame";
+import Heading from "../components/widgets/Heading";
+import AlumniFrame from "../components/widgets/AlumniFrame";
 
 function Alumni() {
   return (
