@@ -7,7 +7,6 @@ import Blogs from './components/Blogs.jsx'
 import HomePage from './pages/HomePage.jsx'
 import Alumni from './pages/Alumni.jsx'
 import Events from './components/Events.jsx'
-import Team from './components/Team.jsx'
 import Contact from './components/Contact.jsx'
 
 const router = createBrowserRouter(
@@ -15,7 +14,6 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="" element={<HomePage />} />
       <Route path="events" element={<Events/>} />
-      <Route path='test'>Test</Route>
       <Route path="blogs" element={<Blogs />} />
       <Route path="team" element={<Team />}></Route>
       <Route path="alumni" element={<Alumni />}></Route>
