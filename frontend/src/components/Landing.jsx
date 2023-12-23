@@ -6,7 +6,7 @@ import About from "./About";
 function Landing() {
 
   return (
-    <div className="w-screen pt-0 sm:pt-12  flex flex-col sm:flex-row items-center justify-center">
+    <div className="w-screen pt-0 sm:pt-16  flex flex-col sm:flex-row items-center justify-center">
       <About />
 
       {/* Carousel  */}

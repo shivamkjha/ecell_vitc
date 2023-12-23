@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage.jsx'
 import Alumni from './pages/Alumni.jsx'
 import Events from './components/Events.jsx'
 import Contact from './components/Contact.jsx'
+import Team from './components/Team.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
