@@ -1,6 +1,5 @@
 import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";

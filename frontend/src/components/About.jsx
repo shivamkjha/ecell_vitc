@@ -1,7 +1,5 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { Link } from "react-router-dom";
 
 function About() {
   return (
