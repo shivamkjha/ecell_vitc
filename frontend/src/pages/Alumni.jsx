@@ -21,7 +21,7 @@ function Alumni() {
           />
           <AlumniFrame
             picture={
-              "public/images/Alumni24/Screenshot 2023-12-22 at 20.00.12.png"
+              "/images/Alumni24/Screenshot 2023-12-22 at 20.00.12.png"
             }
           />
           <AlumniFrame

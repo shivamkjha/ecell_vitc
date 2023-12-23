@@ -3,7 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 function About() {
   return (
-    <div className="w-full sm:w-1/2 pt-4 ml-0 sm:ml-8 p-3">
+    <div className="w-full sm:w-1/2 pt-6 ml-0 sm:ml-8 p-3">
       <div>
         <img
           className="w-60 h-20 mx-auto sm:mx-16"

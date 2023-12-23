@@ -59,7 +59,7 @@ function Blogs() {
       <Heading heading={"Blogs"} />
       <div className="mr-4 sm:mr-24 bg-bcol rounded-r-3xl">
         <div className="mr-7 bg-bcol flex items-center overflow-x-auto overflow-hidden sm:rounded-r-3xl p-3">
-          <div className="h-[650px] sm:h-[600px] flex flex-col flex-wrap">
+          <div className="h-[650px] sm:h-[565px] flex flex-col flex-wrap">
             {blogsData.map((blog, index) => (
               <BlogBox
                 key={index}
