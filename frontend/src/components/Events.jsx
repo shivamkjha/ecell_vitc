@@ -1,7 +1,8 @@
 import React from "react";
-import Sample from "./Sample";
 import Event from "./widgets/Event";
 import Heading from "./widgets/Heading";
+
+
 
 function Events() {
   return (
@@ -57,3 +58,8 @@ function Events() {
 }
 
 export default Events;
+
+
+
+
+
