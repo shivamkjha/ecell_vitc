@@ -2,10 +2,9 @@ import React from "react";
 import { Button } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import Heading from "./widgets/Heading";
+import { Link } from "react-router-dom";
 
-
-function BlogsComponent({blogsData}) {
-
+function BlogsComponent({ blogsData }) {
   return (
     <div id="events">
       <Heading heading={"Blogs"} />
@@ -16,25 +15,31 @@ function BlogsComponent({blogsData}) {
               <BlogBox
                 key={index}
                 picture={blog.picture}
-                heading={blog.heading}d
+                heading={blog.heading}
+                d
                 author={blog.author}
                 content={blog.content}
               />
             ))}
 
-          <div>
-            <div className="m-4 w-96 h-72 sm:w-[610px] sm:h-[250px] flex justify-center items-center flex-shrink-0 border-4 bg-gray-500 shadow-2xl rounded-xl overflow-hidden">
-              <div className=" text-center">
-                <p className="text-white font-medium text-xl m-2">
-                  Click below to read more such blogs
-                </p>
-                <Button variant="contained" color="success">
-                  Explore
-                  <ArrowOutwardIcon />
-                </Button>
+            <div>
+              <div className="m-4 w-96 h-72 sm:w-[610px] sm:h-[250px] flex justify-center items-center flex-shrink-0 border-4 bg-gray-500 shadow-2xl rounded-xl overflow-hidden">
+                <div className=" text-center">
+                  <p className="text-white font-medium text-xl m-2">
+                    Click below to read more such blogs
+                  </p>
+
+                  <Link to="blogs">
+                    <Button variant="contained" color="success">
+                      Explore
+                      <ArrowOutwardIcon />
+                    </Button>
+                  </Link>
+
+
+                </div>
               </div>
             </div>
-          </div>
           </div>
           {/* Additional div for the Explore section */}
         </div>
@@ -43,10 +48,7 @@ function BlogsComponent({blogsData}) {
   );
 }
 
-
 export default BlogsComponent;
-
-
 
 export function BlogBox({ heading, author, content, picture }) {
   return (
@@ -79,5 +81,4 @@ export function BlogBox({ heading, author, content, picture }) {
     </div>
   );
 }
-
 
