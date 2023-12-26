@@ -47,7 +47,7 @@ function EventBox({ eventName, description, picture }) {
   );
 }
 
-function EventsComponent({eventsData}) {
+function EventsComponent({ eventsData }) {
   return (
     <div id="events">
       <Heading heading={"Our Events"} />
@@ -55,10 +55,10 @@ function EventsComponent({eventsData}) {
         {eventsData.map((event, index) => (
           <EventBox
             key={index}
-            picture={event.picture}
-            eventName={event.eventName}
+            picture={event.photo}
+            eventName={event.title}
             description={event.description}
-          /> 
+          />
         ))}
       </div>
     </div>
@@ -66,12 +66,3 @@ function EventsComponent({eventsData}) {
 }
 
 export default EventsComponent;
-
-
-
-
-
-
-
-
-
