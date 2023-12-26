@@ -54,7 +54,7 @@ const Footer = () => (
       <SocialMedia />
     </div>
 
-    <div class="bg-gray text-sm p-1 flex justify-center w-screen">
+    <div className="bg-gray text-sm p-1 flex justify-center w-screen">
       <CopyrightIcon fontSize="small" className="mr-1" />
       <p>Copyright Ecell VITC - All Rights Reserved</p>
     </div>

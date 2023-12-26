@@ -45,7 +45,6 @@ const eventsData = [
   },
 ];
 
-
 function Events() {
   return (
     <div id="events">
