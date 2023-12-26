@@ -5,6 +5,7 @@ import LandingComponent from "../components/LandingPage";
 import TeamComponent from "../components/TeamComponent";
 import BlogsComponent from "../components/BlogsComponent";
 
+
 const BlogsData = [
   {
     date: "1 jan",
@@ -95,10 +96,7 @@ const EventsData = [
   },
 ];
 
-
-
 function HomePage() {
-  
 
   return (
     <div>
