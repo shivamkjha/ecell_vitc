@@ -29,7 +29,7 @@ function BlogsComponent({ blogsData }) {
                     Click below to read more such blogs
                   </p>
 
-                  <Link to="blogs/explore">
+                  <Link to="blogs">
                     <Button variant="contained" color="success">
                       Explore
                       <ArrowOutwardIcon />

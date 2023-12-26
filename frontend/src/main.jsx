@@ -117,8 +117,8 @@ const router = createBrowserRouter(
         path="events"
         element={<EventsComponent eventsData={EventsData} />}
       />
-      <Route path="blogs" element={<BlogsComponent blogsData={BlogsData} />} />
-      <Route path="blogs/explore" element={<ExploreBlogsComponent BlogsData = {BlogsData} />} />
+      {/* <Route path="blogs" element={<BlogsComponent blogsData={BlogsData} />} /> */}
+      <Route path="blogs" element={<ExploreBlogsComponent BlogsData = {BlogsData} />} />
       <Route path="team" element={<TeamComponent />}></Route>
       <Route path="contact" element={<ContactComponent />}></Route>
       <Route path="timeline" element={<TimelineComponent />} />
