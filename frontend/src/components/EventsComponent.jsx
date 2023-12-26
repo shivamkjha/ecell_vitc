@@ -5,7 +5,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-// import { EventsData } from "../pages/HomePage";
 
 function EventBox({ eventName, description, picture }) {
   return (
@@ -48,8 +47,7 @@ function EventBox({ eventName, description, picture }) {
   );
 }
 
-function EventsComponent() {
-  const {eventsData} = EventsData;
+function EventsComponent({eventsData}) {
   return (
     <div id="events">
       <Heading heading={"Our Events"} />
