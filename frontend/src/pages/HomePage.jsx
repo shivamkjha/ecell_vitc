@@ -5,6 +5,8 @@ import ContactComponent from "../components/ContactComponent";
 import LandingComponent from "../components/LandingPage";
 import TeamComponent from "../components/TeamComponent";
 import BlogsComponent from "../components/BlogsComponent";
+import BlogsIndexPage from "./ViewBlogs";
+import CreateBlogPage from "./CreateBlogPage";
 
 
 const BlogsData = [
@@ -145,7 +147,9 @@ const HomePage = () => {
     <div>
       <div className="" style={{ backgroundColor: "#F5F5F5" }}>
         <LandingComponent />
-        <EventsComponent  eventsData={EventsData} />
+        {/* <BlogsIndexPage /> */}
+        {/* <CreateBlogPage /> */}
+        <EventsComponent eventsData={EventsData} />
         <BlogsComponent blogsData={BlogsData} />
         <TeamComponent />
         <ContactComponent />

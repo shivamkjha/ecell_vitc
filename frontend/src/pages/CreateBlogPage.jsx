@@ -1,6 +1,8 @@
 import React from 'react'
 import { Button } from '@mui/material';
-function BlogEdit() {
+
+
+function CreateBlogPage() {
   return (
     <div className='m-8'>
       <div className="text-3xl text-white mb-4">
@@ -22,4 +24,4 @@ function BlogEdit() {
   );
 }
 
-export default BlogEdit
+export default CreateBlogPage;
