@@ -5,6 +5,10 @@ import ContactComponent from "../components/ContactComponent";
 import LandingComponent from "../components/LandingPage";
 import TeamComponent from "../components/TeamComponent";
 import BlogsComponent from "../components/BlogsComponent";
+import CreateBlogPage from "./CreateBlogPage";
+import CreateEventsPage from "./CreateEventsPage";
+import ViewEventsPage from "./ViewEventsPage";
+import ViewBlogsPage from "./ViewBlogsPage";
 
 /*const BlogsData = [
   {
@@ -109,9 +113,7 @@ const HomePage = () => {
 
   const fetchEventData = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:5000/api/v1/events"
-      );
+      const response = await axios.get("http://localhost:5000/api/v1/events");
       setEventsData(response.data.data);
     } catch (error) {
       console.error("Error fetching event data:", error);
@@ -120,32 +122,31 @@ const HomePage = () => {
 
   const fetchBlogsData = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:5000/api/v1/blogs"
-      );
-      setBlogsData(response.data.data); 
+      const response = await axios.get("http://localhost:5000/api/v1/blogs");
+      setBlogsData(response.data.data);
     } catch (error) {
       console.error("Error fetching blogs data:", error);
     }
   };
   const fetchCarouselData = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:5000/api/v1/carousel"
-      );
+      const response = await axios.get("http://localhost:5000/api/v1/carousel");
       setCarouselsData(response.data.data);
     } catch (error) {
       console.error("Error fetching carousel data:", error);
     }
   };
-  
-  
+
   return (
     <div>
       <div className="" style={{ backgroundColor: "#F5F5F5" }}>
         <LandingComponent />
-        <EventsComponent  eventsData={eventsData} />
-        <BlogsComponent blogsData={blogsData} />
+        <ViewEventsPage />
+        <CreateEventsPage />
+        <ViewBlogsPage />
+        <CreateBlogPage />
+        <EventsComponent eventsData={EventsData} />
+        <BlogsComponent blogsData={BlogsData} />
         <TeamComponent />
         <ContactComponent />
       </div>
@@ -154,6 +155,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-
-
