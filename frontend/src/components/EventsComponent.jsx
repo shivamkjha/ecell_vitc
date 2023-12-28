@@ -49,8 +49,11 @@ function EventBox({ eventName, description, picture }) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function EventsComponent({ eventsData }) {
 =======
+=======
+>>>>>>> a1a2f2570b1ae72b356cdd8e73ea217475edb626
 const EventsData = [
   {
     picture: "/images/IPLBattle.png",
@@ -94,7 +97,10 @@ const EventsData = [
 ];
 
 function EventsComponent() {
+<<<<<<< HEAD
 >>>>>>> f0bf6d591c603791fd51451eca7665b57b52c95c
+=======
+>>>>>>> a1a2f2570b1ae72b356cdd8e73ea217475edb626
   return (
     <div id="events">
       <Heading heading={"Our Events"} />

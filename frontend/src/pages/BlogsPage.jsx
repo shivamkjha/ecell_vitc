@@ -48,22 +48,26 @@ const BlogsData = [
   },
 ];
 
+<<<<<<< HEAD:frontend/src/components/ExploreBlogsComponent.jsx
 function ExploreBlogsComponent() {
+=======
+function BlogsPage() {
+>>>>>>> a1a2f2570b1ae72b356cdd8e73ea217475edb626:frontend/src/pages/BlogsPage.jsx
   const lastBlog = BlogsData[BlogsData.length - 1];
   const secondLastBlog = BlogsData[BlogsData.length - 2];
   const thirdLastBlog = BlogsData[BlogsData.length - 3];
   const fourthLastBlog = BlogsData[BlogsData.length - 4];
 
   return (
-    <div className="w-screen box-border p-8 relative">
+    <div className="w-screen box-border p-0 sm:p-4 relative">
       {/* Background Image with Dim Overlay */}
-      <div className="mb-2 h-screen">
+      <div className="mb-2 h-[600px]">
         <div
           className="border-box w-full h-full relative"
           style={{
             backgroundImage: `url(${lastBlog.picture})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "top",
           }}
         >
           {/* Semi-transparent Overlay */}
@@ -71,9 +75,9 @@ function ExploreBlogsComponent() {
 
           {/* Text Content */}
           <div className="absolute w-full h-full flex items-center justify-center text-center text-white font-bold">
-            <div className="w-2/3">
-              <p className="text-7xl">{lastBlog.heading}</p>
-              <p className="text-xl p-12 text-gray-300">{lastBlog.content}</p>
+            <div className="w-full sm:w-2/3">
+              <p className="text-5xl sm:text-7xl">{lastBlog.heading}</p>
+              <p className="sm:text-xl p-2 sm:p-12 text-gray-300">{lastBlog.content}</p>
             </div>
           </div>
         </div>
@@ -166,7 +170,7 @@ function ExploreBlogsComponent() {
   );
 }
 
-export default ExploreBlogsComponent;
+export default BlogsPage;
 
 function OtherBlogs({ blog }) {
   return (

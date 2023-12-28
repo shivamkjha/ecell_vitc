@@ -4,7 +4,11 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import Heading from "./widgets/Heading";
 import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
 const BlogsData = [
+=======
+const blogsData = [
+>>>>>>> a1a2f2570b1ae72b356cdd8e73ea217475edb626
   {
     date: "1 jan",
     picture:
@@ -83,13 +87,10 @@ function BlogsComponent() {
                       <ArrowOutwardIcon />
                     </Button>
                   </Link>
-
-
                 </div>
               </div>
             </div>
           </div>
-          {/* Additional div for the Explore section */}
         </div>
       </div>
     </div>

@@ -35,10 +35,9 @@ function NavbarComponent() {
     "Events",
     "Blogs",
     "Team",
-    "Timeline",
     "Alumni",
+    "Timeline",
     "Contact us",
-    "Timeline",     //! just add this line code should work 
   ];
 
   const socialLinks = [
