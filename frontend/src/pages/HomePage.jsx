@@ -6,7 +6,7 @@ import LandingComponent from "../components/LandingPage";
 import TeamComponent from "../components/TeamComponent";
 import BlogsComponent from "../components/BlogsComponent";
 
-const BlogsData = [
+/*const BlogsData = [
   {
     date: "1 jan",
     picture:
@@ -52,9 +52,9 @@ const BlogsData = [
     content:
       "In today's world, raising funding requires a strategic approach. Start by refining your business plan and identifying your target investors. Utilize crowdfunding platforms, pitch competitions, and angel investor networks.",
   },
-];
+];*/
 
-const EventsData = [
+/*const EventsData = [
   {
     picture: "/images/IPLBattle.png",
     eventName: "IPL Battle",
@@ -94,9 +94,7 @@ const EventsData = [
     something exciting to happen. Yes, IPL Auction is here. E-cell is
     organizing an exciting 8-hour long IPL-auction where people can build their dream team.`,
   },
-];
-
-
+];*/
 
 const HomePage = () => {
   const [eventsData, setEventsData] = useState([]);
@@ -146,8 +144,8 @@ const HomePage = () => {
     <div>
       <div className="" style={{ backgroundColor: "#F5F5F5" }}>
         <LandingComponent />
-        <EventsComponent  eventsData={EventsData} />
-        <BlogsComponent blogsData={BlogsData} />
+        <EventsComponent  eventsData={eventsData} />
+        <BlogsComponent blogsData={blogsData} />
         <TeamComponent />
         <ContactComponent />
       </div>

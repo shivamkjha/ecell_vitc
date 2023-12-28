@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-function EventBox({ eventName, description, picture }) {
+function EventBox({ title, description, photo}) {
   return (
     <div className="bg-bcol p-7">
       <Card
@@ -18,8 +18,8 @@ function EventBox({ eventName, description, picture }) {
             className="h-68 sm:h-80"
             component="img"
             // height="120"
-            image={picture}
-            alt={eventName}
+            image={photo}
+            alt={title}
           />
           <CardContent>
             <Typography
@@ -30,7 +30,7 @@ function EventBox({ eventName, description, picture }) {
               component="div"
               className="text-md sm:text-lg text-center text-primary"
             >
-              {eventName}
+              {title}
             </Typography>
             <Typography
               variant="body2"
@@ -55,8 +55,8 @@ function EventsComponent({eventsData}) {
         {eventsData.map((event, index) => (
           <EventBox
             key={index}
-            picture={event.picture}
-            eventName={event.eventName}
+            photo={event.photo}
+            title={event.title}
             description={event.description}
           /> 
         ))}

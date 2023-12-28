@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Event from "./widgets/Event";
 import Heading from "./widgets/Heading";
 
-const eventsData = [
+/*const eventsData = [
    
   {
     picture: "/images/IPLBattle.png",
@@ -43,7 +43,7 @@ const eventsData = [
       something exciting to happen. Yes, IPL Auction is here. E-cell is
       organizing an exciting 8-hour long IPL-auction where people can build their dream team.`,
   },
-];
+];*/
 
 function Events() {
   return (
@@ -53,8 +53,8 @@ function Events() {
         {eventsData.map((event, index) => (
           <Event
             key={index}
-            picture={event.picture}
-            eventName={event.eventName}
+            picture={event.photo}
+            eventName={event.title}
             description={event.description}
           />
           
