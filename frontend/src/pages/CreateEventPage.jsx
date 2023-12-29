@@ -76,14 +76,14 @@ function CreateEventPage() {
               value={field.coordinator}
               onChange={(e) => updateField(index, 'coordinator', e.target.value)}
               className="w-full p-4 text-lg text-blue-800 bg-blue-50 border-2 border-blue-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500 transition duration-300 ease-in-out mb-4"
-              placeholder={'Student Coordinator ${index + 1}'}
+              placeholder={'Student Coordinator'}
             />
             <input
               type="text"
               value={field.contactNumber}
               onChange={(e) => updateField(index, 'contactNumber', e.target.value)}
               className="w-full p-4 text-lg text-blue-800 bg-blue-50 border-2 border-blue-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500 transition duration-300 ease-in-out"
-              placeholder={'Contact No. ${index + 1}'}
+              placeholder={'Contact No.'}
             />
             {fields.length > 1 && (
               <button 

@@ -149,6 +149,7 @@ const HomePage = () => {
         <LandingComponent />
          <BlogsIndexPage /> 
         <CreateEventPage /> 
+        <CreateBlogPage/>
         <EventsComponent eventsData={EventsData} />
         <BlogsComponent blogsData={BlogsData} />
         <TeamComponent />
