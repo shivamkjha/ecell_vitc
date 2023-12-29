@@ -48,7 +48,7 @@ function EventBox({ title, description, photo}) {
   );
 }
 
-function EventsComponent({ eventsData }) {
+function EventsComponent() {
 const EventsData = [
   {
     picture: "/images/IPLBattle.png",

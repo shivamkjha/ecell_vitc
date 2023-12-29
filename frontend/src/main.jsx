@@ -15,22 +15,14 @@ import EventsComponent from "./components/EventsComponent.jsx";
 import ContactComponent from "./components/ContactComponent.jsx";
 import TeamComponent from "./components/TeamComponent.jsx";
 import TimelineComponent from "./components/TimelineComponent.jsx";
-<<<<<<< HEAD
-import ExploreBlogsComponent from "./components/ExploreBlogsComponent.jsx";
-=======
 
->>>>>>> a1a2f2570b1ae72b356cdd8e73ea217475edb626
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<HomePage />} />
       <Route path="events" element={<EventsComponent />} />
-<<<<<<< HEAD
-      <Route path="blogs" element={<ExploreBlogsComponent />} />
-=======
       <Route path="blogs" element={<BlogsPage />} />
->>>>>>> a1a2f2570b1ae72b356cdd8e73ea217475edb626
       <Route path="team" element={<TeamComponent />}></Route>
       <Route path="contact" element={<ContactComponent />}></Route>
       <Route path="timeline" element={<TimelineComponent />} />

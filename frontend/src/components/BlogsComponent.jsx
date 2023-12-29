@@ -4,11 +4,7 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import Heading from "./widgets/Heading";
 import { Link } from "react-router-dom";
 
-<<<<<<< HEAD
-const BlogsData = [
-=======
 const blogsData = [
->>>>>>> a1a2f2570b1ae72b356cdd8e73ea217475edb626
   {
     date: "1 jan",
     picture:
@@ -63,7 +59,7 @@ function BlogsComponent() {
       <div className="mr-4 sm:mr-24 bg-bcol rounded-r-3xl">
         <div className="mr-7 bg-bcol flex items-center overflow-x-auto overflow-hidden sm:rounded-r-3xl p-3">
           <div className="h-[650px] sm:h-[565px] flex flex-col flex-wrap">
-            {BlogsData.map((blog, index) => (
+            {blogsData.map((blog, index) => (
               <BlogBox
                 key={index}
                 body={blog.body}

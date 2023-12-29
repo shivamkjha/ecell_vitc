@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Event from "./widgets/Event";
 import Heading from "./widgets/Heading";
 
-/*const eventsData = [
+const eventsData = [
    
   {
     picture: "/images/IPLBattle.png",
@@ -43,7 +43,7 @@ import Heading from "./widgets/Heading";
       something exciting to happen. Yes, IPL Auction is here. E-cell is
       organizing an exciting 8-hour long IPL-auction where people can build their dream team.`,
   },
-];*/
+];
 
 function Events() {
   return (

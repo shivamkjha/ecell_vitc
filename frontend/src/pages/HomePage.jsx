@@ -6,12 +6,12 @@ import LandingComponent from "../components/LandingPage";
 import TeamComponent from "../components/TeamComponent";
 import BlogsComponent from "../components/BlogsComponent";
 import CreateBlogPage from "./CreateBlogPage";
-import CreateEventsPage from "./CreateEventsPage";
+// import CreateEventsPage from "./CreateEventsPage";
 import ViewEventsPage from "./ViewEventsPage";
 import ViewBlogsPage from "./ViewBlogsPage";
 import FullBlogPage from "./FullBlogPage";
 
-/*const BlogsData = [
+const BlogsData = [
   {
     date: "1 jan",
     picture:
@@ -57,9 +57,9 @@ import FullBlogPage from "./FullBlogPage";
     content:
       "In today's world, raising funding requires a strategic approach. Start by refining your business plan and identifying your target investors. Utilize crowdfunding platforms, pitch competitions, and angel investor networks.",
   },
-];*/
+];
 
-/*const EventsData = [
+const EventsData = [
   {
     picture: "/images/IPLBattle.png",
     eventName: "IPL Battle",
@@ -99,7 +99,7 @@ import FullBlogPage from "./FullBlogPage";
     something exciting to happen. Yes, IPL Auction is here. E-cell is
     organizing an exciting 8-hour long IPL-auction where people can build their dream team.`,
   },
-];*/
+];
 
 const HomePage = () => {
   const [eventsData, setEventsData] = useState([]);
@@ -143,7 +143,7 @@ const HomePage = () => {
       <div className="" style={{ backgroundColor: "#F5F5F5" }}>
         <LandingComponent />
         <ViewEventsPage />
-        <CreateEventsPage />
+
         <FullBlogPage />
         <ViewBlogsPage />
         <CreateBlogPage />
