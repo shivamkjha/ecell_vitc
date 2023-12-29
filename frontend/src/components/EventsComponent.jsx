@@ -49,6 +49,29 @@ const eventsData = [
   },
 ];
 
+
+
+
+function EventsComponent() {
+  return (
+    <div id="events">
+      <Heading heading={"Our Events"} />
+      <div className="ml-10 sm:ml-24 flex items-center overflow-x-auto overflow-hidden rounded-l-3xl">
+        {eventsData.map((event, index) => (
+          <EventBox
+          key={index}
+          photo={event.picture}
+          title={event.title}
+          description={event.description}
+          />
+          ))}
+      </div>
+    </div>
+  );
+}
+
+export default EventsComponent;
+
 function EventBox({ title, description, photo}) {
   return (
     <div className="bg-bcol p-7">
@@ -89,25 +112,3 @@ function EventBox({ title, description, photo}) {
     </div>
   );
 }
-
-
-
-function EventsComponent() {
-  return (
-    <div id="events">
-      <Heading heading={"Our Events"} />
-      <div className="ml-10 sm:ml-24 flex items-center overflow-x-auto overflow-hidden rounded-l-3xl">
-        {eventsData.map((event, index) => (
-          <EventBox
-            key={index}
-            photo={event.picture}
-            title={event.title}
-            description={event.description}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export default EventsComponent;
