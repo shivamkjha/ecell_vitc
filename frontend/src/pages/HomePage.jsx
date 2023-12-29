@@ -9,6 +9,7 @@ import CreateBlogPage from "./CreateBlogPage";
 import CreateEventsPage from "./CreateEventsPage";
 import ViewEventsPage from "./ViewEventsPage";
 import ViewBlogsPage from "./ViewBlogsPage";
+import FullBlogPage from "./FullBlogPage";
 
 
 const BlogsData = [
@@ -151,6 +152,7 @@ const HomePage = () => {
         <LandingComponent />
         <ViewEventsPage />
         <CreateEventsPage />
+        <FullBlogPage />
         <ViewBlogsPage />
         <CreateBlogPage />
         <EventsComponent eventsData={EventsData} />
