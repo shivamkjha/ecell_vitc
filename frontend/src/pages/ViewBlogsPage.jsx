@@ -62,7 +62,7 @@ function ViewBlogs() {
         </button>
       </div>
 
-      <div className="border-2 border-black h-screen">
+      <div className=" border-black h-screen">
 
         {/* map can be used to shorten this  */}
         <div className="border-2 border-black bg-primary text-white flex w-screen justify-evenly font-semibold p-3">
@@ -107,7 +107,7 @@ const BlogsTable = ({ blog, index }) => {
   };
 
   return (
-    <div className="border-2 border-black flex w-screen justify-evenly font-semibold p-3">
+    <div className="border-b-2 border-black flex w-screen justify-evenly font-semibold p-3">
       <div className="w-1/6 ml-8 flex items-center text-center">
         {index + 1}
       </div>
