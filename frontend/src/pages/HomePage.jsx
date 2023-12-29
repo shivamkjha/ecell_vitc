@@ -142,10 +142,10 @@ const HomePage = () => {
     <div>
       <div className="" style={{ backgroundColor: "#F5F5F5" }}>
         <LandingComponent />
-        <ViewEventsPage />
-        <FullBlogPage />
-        <ViewBlogsPage />
-        <CreateBlogPage />
+        {/* <ViewEventsPage /> */}
+        {/* <FullBlogPage /> */}
+        {/* <ViewBlogsPage /> */}
+        {/* <CreateBlogPage /> */}
         <EventsComponent eventsData={EventsData} />
         <BlogsComponent blogsData={BlogsData} />
         <TeamComponent />
