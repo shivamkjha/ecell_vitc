@@ -44,7 +44,7 @@ const eventsData = [
   },
 ];
 
-function ViewEvents() {
+function ViewEventsPage() {
   return (
     <div>
       <div className="w-full h-30 text-3xl p-2 font-semibold text-center">
@@ -78,7 +78,7 @@ function ViewEvents() {
     </div>
   );
 }
-export default ViewEvents;
+export default ViewEventsPage;
 
 // BlogTable component to display each blog entry
 const EventsTable = ({ blog, index }) => {

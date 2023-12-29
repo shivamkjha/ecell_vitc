@@ -15,6 +15,11 @@ import EventsComponent from "./components/EventsComponent.jsx";
 import ContactComponent from "./components/ContactComponent.jsx";
 import TeamComponent from "./components/TeamComponent.jsx";
 import TimelineComponent from "./components/TimelineComponent.jsx";
+import ViewBlogsPage from "./pages/ViewBlogsPage.jsx";
+import ViewEventsPage from "./pages/ViewEventsPage.jsx";
+import AdminDashboardPage from "./pages/AdminDashboardPage.jsx";
+import CreateBlogPage from "./pages/CreateBlogPage.jsx";
+
 
 
 const router = createBrowserRouter(
@@ -24,9 +29,12 @@ const router = createBrowserRouter(
       <Route path="events" element={<EventsComponent />} />
       <Route path="blogs" element={<BlogsPage />} />
       <Route path="team" element={<TeamComponent />}></Route>
-      <Route path="contact" element={<ContactComponent />}></Route>
+      <Route path="contact" element={<ContactComponent />} />
       <Route path="timeline" element={<TimelineComponent />} />
       <Route path="alumni" element={<AlumniPage />}></Route>
+      <Route path="viewblogs" element={<ViewBlogsPage />} />
+      <Route path="viewevents" element={<ViewEventsPage />} />
+      <Route path="dashboard" element={<AdminDashboardPage />} />
     </Route>
   )
 );

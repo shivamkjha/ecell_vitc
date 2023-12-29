@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "@mui/material";
 
 function CreateBlogPage() {
-  // const [selectedFile, setSelectedFile] = useState(null);
   return (
     <div className="m-8 text-center">
       <div className="text-3xl text-white mb-4">
