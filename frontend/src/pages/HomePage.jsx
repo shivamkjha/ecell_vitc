@@ -11,8 +11,7 @@ import ViewEventsPage from "./ViewEventsPage";
 import ViewBlogsPage from "./ViewBlogsPage";
 import FullBlogPage from "./FullBlogPage";
 
-
-const BlogsData = [
+/*const BlogsData = [
   {
     date: "1 jan",
     picture:
@@ -58,9 +57,9 @@ const BlogsData = [
     content:
       "In today's world, raising funding requires a strategic approach. Start by refining your business plan and identifying your target investors. Utilize crowdfunding platforms, pitch competitions, and angel investor networks.",
   },
-];
+];*/
 
-const EventsData = [
+/*const EventsData = [
   {
     picture: "/images/IPLBattle.png",
     eventName: "IPL Battle",
@@ -100,7 +99,7 @@ const EventsData = [
     something exciting to happen. Yes, IPL Auction is here. E-cell is
     organizing an exciting 8-hour long IPL-auction where people can build their dream team.`,
   },
-];
+];*/
 
 const HomePage = () => {
   const [eventsData, setEventsData] = useState([]);
@@ -115,9 +114,7 @@ const HomePage = () => {
 
   const fetchEventData = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:5000/api/v1/events"
-      );
+      const response = await axios.get("http://localhost:5000/api/v1/events");
       setEventsData(response.data.data);
     } catch (error) {
       console.error("Error fetching event data:", error);
@@ -126,26 +123,21 @@ const HomePage = () => {
 
   const fetchBlogsData = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:5000/api/v1/blogs"
-      );
-      setBlogsData(response.data.data); 
+      const response = await axios.get("http://localhost:5000/api/v1/blogs");
+      setBlogsData(response.data.data);
     } catch (error) {
       console.error("Error fetching blogs data:", error);
     }
   };
   const fetchCarouselData = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:5000/api/v1/carousel"
-      );
+      const response = await axios.get("http://localhost:5000/api/v1/carousel");
       setCarouselsData(response.data.data);
     } catch (error) {
       console.error("Error fetching carousel data:", error);
     }
   };
-  
-  
+
   return (
     <div>
       <div className="" style={{ backgroundColor: "#F5F5F5" }}>
@@ -165,6 +157,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-
-

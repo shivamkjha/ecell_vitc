@@ -48,7 +48,11 @@ const BlogsData = [
   },
 ];
 
+<<<<<<< HEAD:frontend/src/components/ExploreBlogsComponent.jsx
+function ExploreBlogsComponent() {
+=======
 function BlogsPage() {
+>>>>>>> a1a2f2570b1ae72b356cdd8e73ea217475edb626:frontend/src/pages/BlogsPage.jsx
   const lastBlog = BlogsData[BlogsData.length - 1];
   const secondLastBlog = BlogsData[BlogsData.length - 2];
   const thirdLastBlog = BlogsData[BlogsData.length - 3];
