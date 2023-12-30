@@ -4,7 +4,6 @@ import { Link as ScrollLink } from "react-scroll";
 import Carousel from "react-material-ui-carousel";
 import { Paper } from "@mui/material";
 
-
 function LandingPage() {
   return (
     <div className="w-screen pt-0 sm:pt-16  flex flex-col sm:flex-row items-center justify-center">
@@ -22,8 +21,7 @@ function LandingPage() {
 
 export default LandingPage;
 
-
-//! This is Horizontal first half 
+//! This is Horizontal first half
 export function About() {
   return (
     <div className="w-full sm:w-1/2 pt-6 ml-0 sm:ml-8 p-3">
@@ -110,6 +108,3 @@ function Item(props) {
     </Paper>
   );
 }
-
-
-
