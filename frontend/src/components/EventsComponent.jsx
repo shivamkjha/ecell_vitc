@@ -1,13 +1,13 @@
-import React from "react";
 import Heading from "./widgets/Heading";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-
-function EventBox({ eventName, description, picture }) {
+function EventBox({ title, description, photo }) {
   return (
     <div className="bg-bcol p-7">
       <Card
@@ -19,8 +19,8 @@ function EventBox({ eventName, description, picture }) {
             className="h-68 sm:h-80"
             component="img"
             // height="120"
-            image={picture}
-            alt={eventName}
+            image={photo}
+            alt={title}
           />
           <CardContent>
             <Typography
@@ -31,7 +31,7 @@ function EventBox({ eventName, description, picture }) {
               component="div"
               className="text-md sm:text-lg text-center text-primary"
             >
-              {eventName}
+              {title}
             </Typography>
             <Typography
               variant="body2"
@@ -48,49 +48,64 @@ function EventBox({ eventName, description, picture }) {
   );
 }
 
-const EventsData = [
-  {
-    picture: "/images/IPLBattle.png",
-    eventName: "IPL Battle",
-    description: `IPL is both a religion and a festival! None wants to miss it.
-    A boon to all the people bored of binge-hearing the same old
-    classes and lectures. A blessing to all those who have waited for
-    something exciting to happen. Yes, IPL Auction is here. E-cell is
-    organizing an exciting 8-hour long IPL-auction where people can
-    build their dream team.`,
-  },
-  {
-    picture: "/images/StartupHunt.png",
-    eventName: "Startup Hunt",
-    description: `It's time to immerse yourself in the art of strategic trading. Dive into the chaos of stocks, where every decision echoes in the market! Will you conquer or crumble?
-    Only one way to find out.`,
-  },
-  {
-    picture: "/images/StockMarketSimulation.png",
-    eventName: "Stock Market Simulation",
-    description: `Along with the share market, this event also incorporates modern infrastructure by encouraging crypto and forex trading. Trading will be done through virtual currency on a reputed platform.`,
-  },
-  {
-    picture: "/images/Hackathon.png",
-    eventName: "48 Hours Hackathon",
-    description: `The way to get good ideas is to get lots of ideas and throw the bad ones away.
-    E-cell welcomes you all to join this exciting 24 hours hackathon.
-    You get high-speed internet, great food and whatnot.
-    Register now to get your seat secured and stand a chance to bag an internship and a cash prize of 25,000.
-    Think. Code. Innovate.`,
-  },
-  {
-    picture: "/images/IPLBattle3.0.png",
-    eventName: "IPL Battle",
-    description: `IPL is both a religion and a festival! None wants to miss it.
-    A boon to all the people bored of binge-hearing the same old
-    classes and lectures. A blessing to all those who have waited for
-    something exciting to happen. Yes, IPL Auction is here. E-cell is
-    organizing an exciting 8-hour long IPL-auction where people can build their dream team.`,
-  },
-];
+// const EventsData = [
+//   {
+//     photo: "/images/IPLBattle.png",
+//     title: "IPL Battle",
+//     description: `IPL is both a religion and a festival! None wants to miss it.
+//     A boon to all the people bored of binge-hearing the same old
+//     classes and lectures. A blessing to all those who have waited for
+//     something exciting to happen. Yes, IPL Auction is here. E-cell is
+//     organizing an exciting 8-hour long IPL-auction where people can
+//     build their dream team.`,
+//   },
+//   {
+//     photo: "/images/StartupHunt.png",
+//     title: "Startup Hunt",
+//     description: `It's time to immerse yourself in the art of strategic trading. Dive into the chaos of stocks, where every decision echoes in the market! Will you conquer or crumble?
+//     Only one way to find out.`,
+//   },
+//   {
+//     photo: "/images/StockMarketSimulation.png",
+//     title: "Stock Market Simulation",
+//     description: `Along with the share market, this event also incorporates modern infrastructure by encouraging crypto and forex trading. Trading will be done through virtual currency on a reputed platform.`,
+//   },
+//   {
+//     photo: "/images/Hackathon.png",
+//     title: "48 Hours Hackathon",
+//     description: `The way to get good ideas is to get lots of ideas and throw the bad ones away.
+//     E-cell welcomes you all to join this exciting 24 hours hackathon.
+//     You get high-speed internet, great food and whatnot.
+//     Register now to get your seat secured and stand a chance to bag an internship and a cash prize of 25,000.
+//     Think. Code. Innovate.`,
+//   },
+//   {
+//     photo: "/images/IPLBattle3.0.png",
+//     title: "IPL Battle",
+//     description: `IPL is both a religion and a festival! None wants to miss it.
+//     A boon to all the people bored of binge-hearing the same old
+//     classes and lectures. A blessing to all those who have waited for
+//     something exciting to happen. Yes, IPL Auction is here. E-cell is
+//     organizing an exciting 8-hour long IPL-auction where people can build their dream team.`,
+//   },
+// ];
+const EventsComponent = () => {
+  const [EventsData, setEventsData] = useState([]);
 
-function EventsComponent() {
+  useEffect(() => {
+    fetchEventData();
+  }, []);
+
+  const fetchEventData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:5000/api/v1/events"
+      );
+      setEventsData(response.data.data);
+    } catch (error) {
+      console.error("Error fetching event data:", error);
+    }
+  };
   return (
     <div id="events">
       <Heading heading={"Our Events"} />
@@ -98,8 +113,8 @@ function EventsComponent() {
         {EventsData.map((event, index) => (
           <EventBox
             key={index}
-            picture={event.picture}
-            eventName={event.eventName}
+            photo={event.photo}
+            title={event.title}
             description={event.description}
           /> 
         ))}
