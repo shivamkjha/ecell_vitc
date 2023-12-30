@@ -25,8 +25,7 @@ routing : outlet works as a placeholder to substitute different routes at its pl
 
 
 // View blogs : no of star should return a number
-// Event page plus sign 
 // date type on date : on add it should bring another date input
 // student coordinator (name and contact) and + sign 
 // create blog
-// route
+// Dashboard

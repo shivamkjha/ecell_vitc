@@ -22,6 +22,7 @@ import CreateBlogPage from "./pages/CreateBlogPage.jsx";
 import CreateEventPage from "./pages/CreateEventPage.jsx";
 import RoleAssignmentPage from "./pages/RoleAssignmentPage.jsx";
 import ApproveMembersPage from "./pages/ApproveMembersPage.jsx";
+import FullBlogPage from "./pages/FullBlogPage.jsx";
 
 
 // Routing 
@@ -44,6 +45,7 @@ const router = createBrowserRouter(
       <Route path="createBlogs" element={<CreateBlogPage />} />
       <Route path="roleAssignment" element={<RoleAssignmentPage />} />
       <Route path="approveMembers" element={<ApproveMembersPage />} />
+      <Route path="fullBlog" element={<FullBlogPage />} />
     </Route>
   )
 );
