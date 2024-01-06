@@ -52,7 +52,7 @@ const blogsData = [
 ];
 
 
-function ViewBlogs() {
+function ViewBlogsPage() {
   return (
     <div>
       <div className="w-full h-30 text-3xl p-2 font-semibold text-center">
@@ -82,7 +82,7 @@ function ViewBlogs() {
     </div>
   );
 }
-export default ViewBlogs
+export default ViewBlogsPage
 
 
 
