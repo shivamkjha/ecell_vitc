@@ -5,11 +5,7 @@ import ContactComponent from "../components/ContactComponent";
 import LandingComponent from "../components/LandingPage";
 import TeamComponent from "../components/TeamComponent";
 import BlogsComponent from "../components/BlogsComponent";
-// import CreateBlogPage from "./CreateBlogPage";
-import CreateEventPage from "./CreateEventPage";
-import ViewEventPage from "./ViewEventsPage";
-import ViewBlogsPage from "./ViewBlogsPage";
-import FullBlogPage from "./FullBlogPage";
+
 
 const BlogsData = [
   {
