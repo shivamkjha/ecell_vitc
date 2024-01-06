@@ -15,7 +15,7 @@ import EventsComponent from "./components/EventsComponent.jsx";
 import ContactComponent from "./components/ContactComponent.jsx";
 import TeamComponent from "./components/TeamComponent.jsx";
 import TimelineComponent from "./components/TimelineComponent.jsx";
-
+import LoginPage from "./pages/LoginPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +26,7 @@ const router = createBrowserRouter(
       <Route path="team" element={<TeamComponent />}></Route>
       <Route path="contact" element={<ContactComponent />}></Route>
       <Route path="timeline" element={<TimelineComponent />} />
+      <Route path="LoginPage" element={<LoginPage/>}/>
       <Route path="alumni" element={<AlumniPage />}></Route>
     </Route>
   )

@@ -1,7 +1,6 @@
 import React from 'react'
 import Heading from './widgets/Heading';
 
-
 function ContactComponent() {
   return (
     <div id="contact">
@@ -69,5 +68,4 @@ function ContactComponent() {
 }
 
 export default ContactComponent;
-
 
