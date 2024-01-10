@@ -10,8 +10,8 @@ function AlumniPage() {
       <div className="">
         {/* Vice President  */}
         <div className="flex flex-wrap justify-center">
-          <AlumniFrame picture={"public/images/Alumni24/president.png"} />
-          <AlumniFrame picture={"public/images/Alumni24/VP.png"} />
+          <AlumniFrame picture={"/images/Alumni24/president.png"} />
+          <AlumniFrame picture={"/images/Alumni24/VP.png"} />
         </div>
 
         <div className="flex flex-wrap-reverse justify-center">
