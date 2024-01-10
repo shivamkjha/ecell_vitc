@@ -50,8 +50,6 @@ const eventsData = [
 ];
 
 
-
-
 function EventsComponent() {
   return (
     <div id="events">
