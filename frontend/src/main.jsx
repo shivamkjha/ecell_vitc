@@ -22,9 +22,14 @@ import CreateBlogPage from "./pages/CreateBlogPage.jsx";
 import CreateEventPage from "./pages/CreateEventPage.jsx";
 import RoleAssignmentPage from "./pages/RoleAssignmentPage.jsx";
 import ApproveMembersPage from "./pages/ApproveMembersPage.jsx";
+import FullBlogPage from "./pages/FullBlogPage.jsx";
+import Login from "@mui/icons-material/Login.js";
+import ImagesPage from "./pages/ImagesPage.jsx";
 
 
 // Routing 
+import LoginPage from "./pages/LoginPage.jsx";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
@@ -32,6 +37,7 @@ const router = createBrowserRouter(
       <Route path="team" element={<TeamComponent />} />
       <Route path="contact" element={<ContactComponent />} />
       <Route path="timeline" element={<TimelineComponent />} />
+      <Route path="LoginPage" element={<LoginPage />} />
 
       {/* Pages  */}
       <Route path="" element={<HomePage />} />
@@ -44,6 +50,8 @@ const router = createBrowserRouter(
       <Route path="createBlogs" element={<CreateBlogPage />} />
       <Route path="roleAssignment" element={<RoleAssignmentPage />} />
       <Route path="approveMembers" element={<ApproveMembersPage />} />
+      <Route path="login" element={<Login />} />
+      <Route path="imagesPage" element={<ImagesPage />} />
     </Route>
   )
 );

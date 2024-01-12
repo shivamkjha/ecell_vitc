@@ -14,22 +14,26 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import CloseIcon from "@mui/icons-material/Close";
+import LoginPage from "../pages/LoginPage";
 import { useLocation } from "react-router-dom";
 
 function NavbarComponent() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
 
   const location = useLocation();
-
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const handleMenuItemClick = () => {
-    setMobileOpen(false);  // Close the drawer when a menu item is clicked
+    setMobileOpen(false);
   };
 
+  const handleLoginButtonClick = () => {
+    setLoginOpen(true);
+  };
 
   const menuItems = [
     "Events",
@@ -46,7 +50,7 @@ function NavbarComponent() {
       icon: <InstagramIcon fontSize="medium" className="mr-2" />,
     },
     {
-      href: "#", 
+      href: "#",
       icon: <MailOutlineIcon fontSize="medium" className="mr-2" />,
     },
     {
@@ -55,53 +59,55 @@ function NavbarComponent() {
     },
   ];
 
-const drawer = (
-  <div className="w-screen sm:w-96 flex flex-col justify-between h-full bg-bcol font-semibold text-xl text-gray-700">
-    <div className="flex justify-center bg-primary p-0">
-      <Link to={"/"}>
-        <img className="w-64 h-20 m-0" src="/images/ecell_logo2.png" alt="" />
-      </Link>
-    </div>
-
-    <div className="my-auto text-center flex-col justify-center">
-      <div>
-        <Link to={""} onClick={handleMenuItemClick}>
-          <div className="w-full h-12 hover:scale-150 hover:text-white transition duration-300 ease-in-out">
-            <p className="text-center font-semibold">Home</p>
-          </div>
+  const drawer = (
+    <div className="w-screen sm:w-96 flex flex-col justify-between h-full bg-bcol font-semibold text-xl text-gray-700">
+      <div className="flex justify-center bg-primary p-0">
+        <Link to={"/"}>
+          <img className="w-64 h-20 m-0" src="/images/ecell_logo2.png" alt="" />
         </Link>
       </div>
 
-      <div className="flex flex-col justify-center">
-        {menuItems.map((text, index) => (
-          <Link
-            key={text}
-            to={text.split(" ")[0].toLowerCase()}
-            onClick={handleMenuItemClick}
-          >
-            <div className="w-full h-12 cursor-pointer hover:scale-150 hover:text-white transition duration-300 ease-in-out">
-              <p className="text-center">{text}</p>
+      <div className="my-auto text-center flex-col justify-center">
+        <div>
+          <Link to={""} onClick={handleMenuItemClick}>
+            <div className="w-full h-12 hover:scale-150 hover:text-white transition duration-300 ease-in-out">
+              <p className="text-center font-semibold">Home</p>
             </div>
           </Link>
-        ))}
-        <div className="text-center">
-          <IconButton onClick={handleDrawerToggle} >
-            <CloseIcon className="text-white hover:scale-110" fontSize="large" />
-          </IconButton>
+        </div>
+
+        <div className="flex flex-col justify-center">
+          {menuItems.map((text, index) => (
+            <Link
+              key={text}
+              to={text.split(" ")[0].toLowerCase()}
+              onClick={handleMenuItemClick}
+            >
+              <div className="w-full h-12 cursor-pointer hover:scale-150 hover:text-white transition duration-300 ease-in-out">
+                <p className="text-center">{text}</p>
+              </div>
+            </Link>
+          ))}
+          <div className="text-center">
+            <IconButton onClick={handleDrawerToggle}>
+              <CloseIcon
+                className="text-white hover:scale-110"
+                fontSize="large"
+              />
+            </IconButton>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div className="text-center p-4">
-      {socialLinks.map((link, index) => (
-        <a key={index} className="hover:scale-105" href={link.href}>
-          {link.icon}
-        </a>
-      ))}
+      <div className="text-center p-4">
+        {socialLinks.map((link, index) => (
+          <a key={index} className="hover:scale-105" href={link.href}>
+            {link.icon}
+          </a>
+        ))}
+      </div>
     </div>
-  </div>
-);
-
+  );
 
   return (
     <div className="flex justify-evenly">
@@ -141,7 +147,11 @@ const drawer = (
             <div>
               {location.pathname === "/" && (
                 <div className="ml-auto">
-                  <Button color="inherit" startIcon={<LoginIcon />}>
+                  <Button
+                    color="inherit"
+                    startIcon={<LoginIcon />}
+                    onClick={handleLoginButtonClick}
+                  >
                     <p className="hidden sm:visible">Login</p>
                   </Button>
                 </div>
@@ -162,6 +172,9 @@ const drawer = (
           </Drawer>
         </Hidden>
       </Box>
+
+      {/* Render the LoginPage component with the loginOpen state */}
+      <LoginPage open={loginOpen} onClose={() => setLoginOpen(false)} />
     </div>
   );
 }
