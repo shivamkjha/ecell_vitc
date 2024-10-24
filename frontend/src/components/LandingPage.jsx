@@ -1,4 +1,5 @@
-import React from "react";
+import React,{ useState, useEffect } from 'react';
+import axios from "axios";
 import { Link as ScrollLink } from "react-scroll";
 import Carousel from "react-material-ui-carousel";
 import { Paper } from "@mui/material";
@@ -67,18 +68,23 @@ export function About() {
   );
 }
 
-var items = [
-  {
-    name: "Random Name #1",
-    img: "/images/Screenshot 2023-12-20 at 13.22.42.png",
-  },
-  {
-    name: "Random Name #2",
-    img: "/images/Screenshot 2023-12-20 at 13.23.21.png",
-  },
-];
 //! This is carousel
-function Slides() {
+function Slides(props) {
+  const [items, setCarouselsData] = useState([]);
+  useEffect(() => {
+    fetchCarouselData();
+  }, []);
+  const fetchCarouselData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:5000/api/v1/carousel"
+      );
+      setCarouselsData(response.data.data);
+    } catch (error) {
+      console.error("Error fetching carousel data:", error);
+    }
+  };
+
   return (
     <Carousel className="w-full pt-0">
       {items.map((item, i) => (
@@ -98,7 +104,7 @@ function Item(props) {
         overflow: "hidden",
       }}
     >
-      <img className="w-full h-full" src={props.item.img} alt="" />
+      <img className="w-full h-full" src={props.item.image} alt="" />
     </Paper>
   );
 }
